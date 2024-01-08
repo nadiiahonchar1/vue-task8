@@ -34,6 +34,9 @@ export default {
 <style scoped>
 .alert {
   border: 2px double white;
+  box-shadow: 5px 5px 30px 5px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 5px 5px 30px 5px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 5px 5px 30px 5px rgba(255, 255, 255, 0.75);
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 20px;

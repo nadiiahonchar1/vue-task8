@@ -22,16 +22,6 @@ import AppAlert from "./components/AppAlert.vue";
 export default {
   name: "App",
   components: { AppAlert },
-  data() {
-    return {
-      alert: false,
-    };
-  },
-  methods: {
-    toggleAlert() {
-      this.alert = !this.alert;
-    },
-  },
 };
 </script>
 
