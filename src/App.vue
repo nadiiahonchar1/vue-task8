@@ -1,27 +1,23 @@
 <template>
   <div class="container">
-    <app-alert
-      v-if="alert"
-      text="This is warning"
-      title="Warning!"
-      type="danger"
-      @close="alert = false"
-      closable
-    ></app-alert>
     <div class="cadr">
-      <button class="btn primary" @click="toggleAlert">
-        {{ alert ? "Hide" : "Show" }} alert
-      </button>
+      <h2>Talking about directives</h2>
+      <div class="form-control">
+        <label for="inp">Active by default</label>
+        <input v-focus type="text" id="inp" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import AppAlert from "./components/AppAlert.vue";
-
+import focusDirective from "./components/focusDirective";
 export default {
   name: "App",
-  components: { AppAlert },
+  components: {},
+  directives: {
+    focus: focusDirective,
+  },
 };
 </script>
 

@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import alertMixin from './components/alertMixin'
-
-createApp(App).mixin(alertMixin).mount('#app')
+createApp(App)
+    // .directive('focus', {mounted(el){el.focus()}})
+    .mount('#app')
