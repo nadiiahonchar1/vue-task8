@@ -1,22 +1,43 @@
 <template>
   <div class="container">
-    <div class="cadr">
-      <h2>Talking about directives</h2>
+    <div class="cadr" v-if="show">
+      <h2 v-color:[type].blink.hover="myColor">Talking about directives</h2>
       <div class="form-control">
         <label for="inp">Active by default</label>
         <input v-focus type="text" id="inp" />
       </div>
+      <button class="btn" @click="myColor = 'darkblue'">Change color</button>
+      <button
+        class="btn"
+        @click="type = type === 'color' ? 'backgroundColor' : 'color'"
+      >
+        Switch type
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 import focusDirective from "./components/focusDirective";
+import colorDirective from "./components/colorDirective";
 export default {
   name: "App",
   components: {},
+  data() {
+    return {
+      myColor: "green",
+      type: "color",
+      show: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.show = false;
+    }, 10000);
+  },
   directives: {
     focus: focusDirective,
+    color: colorDirective,
   },
 };
 </script>
