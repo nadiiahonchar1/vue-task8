@@ -37,6 +37,6 @@ export default {
         }
 
         el.removeEventListener("mouseover", mousover);
-        el.removeEventListenerEventListener("mouseout", mousout);
+        el.removeEventListener("mouseout", mousout);
   },
 };
